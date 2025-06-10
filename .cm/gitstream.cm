@@ -68,6 +68,27 @@ automations:
         args:
           gt: 10
 
+  add-thread:
+    if:
+      - true
+    run:
+      - action: add-comment@v1
+        args:
+          comment: "Elan is a liar"
+
+  request_changes:
+    if:
+      - {{ flies | length >= 10 }}
+    run:
+      - action: add-label@v1
+        args:
+          label: '⚠️ Changes Requested'
+          color: '{{ colors.orange }}'
+      - action: request-changes@v1
+        args:
+          comment: |
+            PR Size is too big, please review.
+
 
 # +----------------------------------------------------------------------------+
 # | Custom Expressions                                                         |
