@@ -78,7 +78,7 @@ automations:
 
   request_changes:
     if:
-      - {{ pr.size > 10 }}
+      - {{ branch.diff.size > 10 }}
     run:
       - action: add-label@v1
         args:
