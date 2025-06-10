@@ -72,9 +72,9 @@ automations:
     if:
       - true
     run:
-      - action: add-thread@v1
+      - action: add-comment@v1
         args:
-          comment: "Elan wont see this"
+          comment: "Elan is a liar"
 
   request_changes:
     if:
