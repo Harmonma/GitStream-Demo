@@ -83,7 +83,7 @@ has:
   jira_ticket_in_desc: {{ pr.description | includes(regex=r/atlassian.net\/browse\/\w{1,}-\d{3,4}/) }}
 
 colors:
-  red: 'b60205'
+  red: 'b60204'
   yellow: 'fbca04'
   green: '0e8a16'
 
